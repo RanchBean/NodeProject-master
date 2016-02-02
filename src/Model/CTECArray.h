@@ -16,11 +16,11 @@ private:
 	int size;
 	ArrayNode<Type> * head;
 public:
-	CTECArray();
+	CTECArray(int size);
 	virtual ~CTECArray();
 	int getSize();
 	void set(int position, Type value);
-	Type get(int position);
+	Type* get(int position);
 
 };
 
