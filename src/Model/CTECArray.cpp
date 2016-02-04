@@ -12,6 +12,14 @@ template <class Type>
 CTECArray<Type>::CTECArray(int size)
 {
 	this->size = size;
+	this->head = nullptr;
+
+	//defensive code
+	if(size <=0)
+	{
+		cerr << "DENIED" << endl;
+		return;
+	}
 
 }
 template <class Type>
