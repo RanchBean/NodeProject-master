@@ -42,7 +42,25 @@ for(int index = 0; index<size; index++)
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
+	ArrayNode<Type> * deleteMe = head;
+	for(int index = 0; index < size; index++)
+	{
+		if(deleteMe->getNext()!= nullptr)
+		{
+			head = deleteMe->getNext();
+			deleteMe->setNext(nullptr);
 
+			delete deleteMe;
+			deleteMe = head;
+		}
+		else
+		{
+			delete deleteMe;
+			deleteMe delete;
+		}
+
+	}
+	delete head;
 }
 template <class Type>
 Type* CTECArray<Type>::get(int position)
