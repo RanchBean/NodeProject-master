@@ -21,15 +21,15 @@ CTECArray<Type>::CTECArray(int size) {
 		if (head != nullptr)
 		{
 			//regular array nodes are being made.
-			ArrayNode<Type> nextNode;
-			nextNode.setNext(head);
-			this->head = &nextNode;
+			ArrayNode<Type> * nextNode = new ArrayNode<Type>();
+			nextNode->setNext(head);
+			this->head = nextNode;
 		}
 		else
 		{
 			//first array node needs to be made
-			ArrayNode<Type> firstNode;
-			this->head = &firstNode;
+			ArrayNode<Type> firstNode = new ArrayNode<Type>();
+			this->head = firstNode;
 		}
 
 	}
