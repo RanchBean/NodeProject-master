@@ -28,7 +28,7 @@ CTECArray<Type>::CTECArray(int size) {
 		else
 		{
 			//first array node needs to be made
-			ArrayNode<Type> firstNode = new ArrayNode<Type>();
+			ArrayNode<Type> * firstNode = new ArrayNode<Type>();
 			this->head = firstNode;
 		}
 
@@ -89,8 +89,10 @@ void CTECArray<Type>::set(int position, const Type& value) {
 	for (int spot = 0; spot <= position; spot++) {
 		if (spot != position) {
 			current = current->getNext();
-		} else {
-			current = setValue(value);
+		}
+		else
+		{
+			current->setValue(value);
 		}
 	}
 
