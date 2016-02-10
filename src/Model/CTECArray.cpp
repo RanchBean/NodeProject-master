@@ -20,8 +20,8 @@ CTECArray<Type>::CTECArray(int size)
 		cerr << "DENIED" << endl;
 		return;
 	}
-for(int index = 0; index<size; index++)
-{
+	for(int index = 0; index<size; index++)
+	{
 	if(head !=nullptr)
 	{
 		//regular array nodes are being made.
@@ -56,7 +56,7 @@ CTECArray<Type>::~CTECArray()
 		else
 		{
 			delete deleteMe;
-			deleteMe delete;
+
 		}
 
 	}
@@ -95,7 +95,7 @@ int CTECArray<Type>::getSize()
 	return this->size = size;
 }
 template <class Type>
-void CTECArray<Type>:: set(int position, Type value)
+void CTECArray<Type>:: set(int position, const Type& value)
 {
 	if(position >= size || position < 0)
 		{
