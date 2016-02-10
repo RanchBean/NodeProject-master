@@ -12,6 +12,8 @@ using namespace std;
 NodeController::NodeController()
 {
 	notHipsterInts = new CTECArray<int>(5);
+	notHipDoubles = new CTECArray<double>(4);
+
 
 }
 
@@ -32,6 +34,14 @@ void NodeController :: start()
 	for (int index = notHipsterInts->getSize()-1; index >= 0; index--)
 	{
 		cout << "The contents of the notHipsterInts array node " << index << " are: " << notHipsterInts->get(index) << endl;
+	}
+	for(int index = 0; index < notHipDoubles->getSize(); index ++)
+	{
+		notHipDoubles->set(index , (index + 8));
+	}
+	for(int index = notHipDoubles->getSize() - 1; index >= 0; index--)
+	{
+		cout << "Contents of notHipDoubles " << index << " are: " << notHipDoubles->get(index) <<endl;
 	}
 }
 

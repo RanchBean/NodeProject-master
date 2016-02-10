@@ -19,6 +19,7 @@ class NodeController
 {
 private:
 	CTECArray<int> * notHipsterInts;
+	CTECArray<double> * notHipDoubles;
 	Node<string> stringNode;
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;
