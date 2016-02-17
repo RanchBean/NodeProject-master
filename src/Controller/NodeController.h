@@ -7,11 +7,10 @@
 
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
-#include"../Model/Node.h";
 #include "../Model/Node.cpp";
-#include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
+#include "../Model/Timer.h"
 #include <string>;
 using namespace std;
 
@@ -24,6 +23,7 @@ private:
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;
 	ArrayNode<string> otherArrayNode;
+	Timer arrayTimer;
 public:
 	NodeController();
 	virtual ~NodeController();

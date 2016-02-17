@@ -13,6 +13,7 @@ ArrayNode<Type>::ArrayNode() : Node<Type>()
 	this->next = nullptr;
 
 }
+
 template <class Type>
 ArrayNode<Type> :: ArrayNode(const Type& value) : Node<Type>(value)
 {

@@ -25,7 +25,7 @@ NodeController::~NodeController()
 void NodeController :: start()
 {
 
-
+	arrayTimer.startTimer();
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index * 23));
@@ -43,5 +43,7 @@ void NodeController :: start()
 	{
 		cout << "Contents of notHipDoubles " << index << " are: " << notHipDoubles->get(index) <<endl;
 	}
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation
 }
 
